@@ -84,7 +84,16 @@ STATIC_URL = '/static/'
 # Parse database configuration from $DATABASE_URL
 import dj_database_url
 DATABASES['default'] =  dj_database_url.config()
-
+DATABASES = {
+  'default': {
+    'ENGINE': 'django.db.backends.postgresql_psycopg2',
+    'NAME': 'dfgf43vt0055lh',
+    'HOST': 'ec2-184-72-238-68.compute-1.amazonaws.com',
+    'PORT': 5432,
+    'USER': 'duhbxyjczzyyrh',
+    'PASSWORD': '4hoSRLUewVk__Y57yQr_MqdPJ0'
+  }
+}
 # Honor the 'X-Forwarded-Proto' header for request.is_secure()
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
